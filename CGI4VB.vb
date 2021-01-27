@@ -2,6 +2,7 @@
 ' CGI4VB.BAS
 '====================================
 Option Explicit
+Module CGI4VB
 '
 ' CGI routines used with VB 4.0 (32bit) using STDIN / STDOUT.
 '
@@ -380,3 +381,4 @@ Dim lBytesWritten As Long
 
 WriteFile hStdOut, s, Len(s), lBytesWritten, ByVal 0&
 End Sub
+End Module

@@ -1,3 +1,4 @@
+Module CGI_Example
 Sub CGI_Main()
     
     Send "Status: 200 OK"
@@ -13,3 +14,4 @@ Sub CGI_Main()
     Send "</BODY></HTML>"
 
 End Sub
+end Module
