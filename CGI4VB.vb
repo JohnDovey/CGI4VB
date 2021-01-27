@@ -1,7 +1,12 @@
 Option Explicit On
 Imports System
+Imports System.IO
 
 Module Program
+    ' CGI4BAS.Net
+    ' CGI Routines For CGI_RemoteUser With .Net
+    '     Ported from the original
+    ' Jan 2021 - John Dovey <dovey.john@gmail.com>
     '====================================
     ' CGI4VB.BAS
     '====================================
@@ -58,6 +63,7 @@ Module Program
     Public Const STD_INPUT_HANDLE = -10&
     Public Const STD_OUTPUT_HANDLE = -11&
     Public Const FILE_BEGIN = 0&
+
 
     ' environment variables
     '
@@ -143,6 +149,10 @@ ErrorRoutine:
         hStdIn = GetStdHandle(STD_INPUT_HANDLE)
         hStdOut = GetStdHandle(STD_OUTPUT_HANDLE)
 
+        ' Test
+        hStdIn = System.Console.OpenStandardInput
+        hStdOut = System.Console.OpenStandardOutput
+        ' End Test
         sEmail = "YourEmailAddress@Here"
 
         '==============================

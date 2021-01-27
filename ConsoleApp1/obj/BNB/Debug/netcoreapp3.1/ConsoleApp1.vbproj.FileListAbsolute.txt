@@ -1,0 +1,4 @@
+C:\Users\john\Source\Repos\CGI4VB.net\ConsoleApp1\obj\BNB\Debug\netcoreapp3.1\ConsoleApp1.vbprojAssemblyReference.cache
+C:\Users\john\Source\Repos\CGI4VB.net\ConsoleApp1\obj\BNB\Debug\netcoreapp3.1\ConsoleApp1.AssemblyInfoInputs.cache
+C:\Users\john\Source\Repos\CGI4VB.net\ConsoleApp1\obj\BNB\Debug\netcoreapp3.1\ConsoleApp1.AssemblyInfo.vb
+C:\Users\john\Source\Repos\CGI4VB.net\ConsoleApp1\obj\BNB\Debug\netcoreapp3.1\ConsoleApp1.vbproj.CoreCompileInputs.cache
