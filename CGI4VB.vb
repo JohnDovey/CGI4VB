@@ -127,7 +127,7 @@ ErrorRoutine:
 
         rc = SetFilePointer(hStdOut, 0&, 0&, FILE_BEGIN)
         SendHeader("Internal Error")
-        Send($"<H1>Error in {CGI_ScriptName}</H1>")
+        Send("<H1>Error in " & CGI_ScriptName & "</H1>")
 
         Send("The following internal error has occurred:")
         Send("<PRE>" & sErrorDesc & "</PRE>")
