@@ -33,7 +33,7 @@ Module MSTest
         Dim hStdOut As Long
         Dim iPos As Integer
 
-        sReadBuffer = String$(CLng(Environment(CGI_CONTENT_LENGTH)), 0)
+        sReadBuffer = String(CLng(Environment(CGI_CONTENT_LENGTH)), 0)
 
         ' Read client's input
         'ReadFile hStdIn, sReadBuffer, Len(sReadBuffer), lBytesRead
@@ -52,11 +52,11 @@ Module MSTest
         'WriteFile hStdOut, sReadBuffer, Len(sReadBuffer), lBytesWritten
 
 
-        Dim standardOutput as object = New StreamWriter(Console.OpenStandardOutput())
+        Dim standardOutput As Object = New StreamWriter(Console.OpenStandardOutput())
         standardOutput.AutoFlush = True
         Console.SetOut(standardOutput)
         Console.WriteLine(sWriteBuffer)
         Console.WriteLine(sReadBuffer)
 
-End Sub
+    End Sub
 End Module
