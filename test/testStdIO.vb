@@ -3,8 +3,8 @@ Imports System
 Imports System.IO
 
 Module MSTest
-    Private Const _cGI_AUTH_TYPE As String = "AUTH_TYPE"
-    Private Const _cGI_CONTENT_LENGTH As String = "CONTENT_LENGTH"
+    Public Const CGI_AUTH_TYPE As String = "AUTH_TYPE"
+    Public Const CGI_CONTENT_LENGTH As String = "CONTENT_LENGTH"
     Public Const CGI_CONTENT_TYPE As String = "CONTENT_TYPE"
     Public Const CGI_GATEWAY_INTERFACE As String = "GATEWAY_INTERFACE"
     Public Const CGI_HTTP_ACCEPT As String = "HTTP_ACCEPT"
@@ -20,26 +20,8 @@ Module MSTest
     Public Const CGI_SCRIPT_NAME As String = "SCRIPT_NAME"
     Public Const CGI_SERVER_NAME As String = "SERVER_NAME"
     Public Const CGI_SERVER_PORT As String = "SERVER_PORT"
-    Private Const _cGI_SERVER_PROTOCOL As String = "SERVER_PROTOCOL"
+    Public Const CGI_SERVER_PROTOCOL As String = "SERVER_PROTOCOL"
     Public Const CGI_SERVER_SOFTWARE As String = "SERVER_SOFTWARE"
-
-    Public ReadOnly Property CGI_SERVER_PROTOCOL As String
-        Get
-            Return _cGI_SERVER_PROTOCOL
-        End Get
-    End Property
-
-    Public ReadOnly Property CGI_AUTH_TYPE As String
-        Get
-            Return _cGI_AUTH_TYPE
-        End Get
-    End Property
-
-    Public ReadOnly Property CGI_CONTENT_LENGTH As String
-        Get
-            Return _cGI_CONTENT_LENGTH
-        End Get
-    End Property
 
     Sub Main()
 
@@ -70,10 +52,11 @@ Module MSTest
         'WriteFile hStdOut, sReadBuffer, Len(sReadBuffer), lBytesWritten
 
 
-        Dim standardOutput = New StreamWriter(Console.OpenStandardOutput())
+        Dim standardOutput as object = New StreamWriter(Console.OpenStandardOutput())
         standardOutput.AutoFlush = True
         Console.SetOut(standardOutput)
         Console.WriteLine(sWriteBuffer)
         Console.WriteLine(sReadBuffer)
 
+End Sub
 End Module
