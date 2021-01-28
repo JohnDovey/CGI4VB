@@ -32,13 +32,15 @@ Module MSTest
         Dim hStdIn As Long
         Dim hStdOut As Long
         Dim iPos As Integer
+        Dim sReadBufferStream As Stream
 
         sReadBuffer = System.Environment.GetEnvironmentVariable(CGI_CONTENT_LENGTH).Length
 
 
         ' Read client's input
         'ReadFile hStdIn, sReadBuffer, Len(sReadBuffer), lBytesRead
-        sReadBuffer = System.Console.OpenStandardInput()
+        'sReadBufferStream = System.Console.OpenStandardInput()
+        sReadBuffer = System.Console.In(sReadBuffer.Length)
 
         ' Find '=' in the name/value pair and parse the buffer
         iPos = InStr(sReadBuffer, "=")
