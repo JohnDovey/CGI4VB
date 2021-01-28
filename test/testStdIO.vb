@@ -38,11 +38,11 @@ Module MSTest
 
         ' Read client's input
         'ReadFile hStdIn, sReadBuffer, Len(sReadBuffer), lBytesRead
-        sReadBuffer = System.Console.OpenStandardInput(sReadBuffer.Length)
+        sReadBuffer = System.Console.OpenStandardInput()
 
         ' Find '=' in the name/value pair and parse the buffer
         iPos = InStr(sReadBuffer, "=")
-        sReadBuffer = Mid$(sReadBuffer, iPos + 1)
+        sReadBuffer = Mid(sReadBuffer, iPos + 1)
 
         ' Construct and send response to the client
         sWriteBuffer = "HTTP/1.0 200 OK" & vbCrLf & "Content-Type: text/html" &
