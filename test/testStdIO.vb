@@ -33,7 +33,7 @@ Module MSTest
         Dim hStdOut As Long
         Dim iPos As Integer
 
-        sReadBuffer = String(CLng(Environment(CGI_CONTENT_LENGTH)), 0)
+        sReadBuffer = Environment(CGI_CONTENT_LENGTH).Length
 
         ' Read client's input
         'ReadFile hStdIn, sReadBuffer, Len(sReadBuffer), lBytesRead
