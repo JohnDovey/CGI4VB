@@ -51,7 +51,7 @@ Module TestSTDIO
 		Dim Buffer As Byte() 'byte array for msg
 
 		' OutputData = Newtonsoft.Json.JsonConvert.SerializeObject(ResponseData) 'convert the array to JSON
-		OutputData = ResponseData
+		OutputData = ResponseData(0)
 
 		Buffer = System.Text.Encoding.UTF8.GetBytes(OutputData) 'convert the response to byte array
 		LenBytes = System.BitConverter.GetBytes(Buffer.Length) 'convert the length of response to byte array
