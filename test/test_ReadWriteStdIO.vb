@@ -10,13 +10,14 @@ Module TestSTDIO
 		'create response as an array so it can be easily converted JSON
 		Dim ResponseString() As String = {""}
 
-		' get input from chrome extension
+		' get input from Standard Input
 		Dim InputString As String = OpenStandardStreamIn()
 
 		' Do whatever you want with Input, then prepare Response
-		ResponseString(0) = DO_SOMETHING(InputString)
+		'ResponseString(0) = DO_SOMETHING(InputString)
+		ResponseString(0) = InputString
 
-		' Send Response to Chrome
+		' Send Response to Std Output
 		OpenStandardStreamOut(ResponseString)
 
 	End Sub
@@ -49,7 +50,8 @@ Module TestSTDIO
 		Dim LenBytes As Byte() = New Byte(3) {} 'byte array for length
 		Dim Buffer As Byte() 'byte array for msg
 
-		OutputData = Newtonsoft.Json.JsonConvert.SerializeObject(ResponseData) 'convert the array to JSON
+		' OutputData = Newtonsoft.Json.JsonConvert.SerializeObject(ResponseData) 'convert the array to JSON
+		OutputData = ResponseData
 
 		Buffer = System.Text.Encoding.UTF8.GetBytes(OutputData) 'convert the response to byte array
 		LenBytes = System.BitConverter.GetBytes(Buffer.Length) 'convert the length of response to byte array
