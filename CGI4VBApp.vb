@@ -1,9 +1,9 @@
-Option Explicit On
+﻿Option Explicit On
 Imports System
 Imports System.IO
 Imports System.Text
 
-Module CGIApp
+Module CGI4VBApp
     ' CGI4BAS.Net
     ' CGI Routines For CGI_RemoteUser With .Net
     '     Ported from the original

@@ -1,0 +1,11 @@
+C:\Users\john\source\repos\CGIApp\bin\Debug\CGIApp.exe.config
+C:\Users\john\source\repos\CGIApp\bin\Debug\CGIApp.exe
+C:\Users\john\source\repos\CGIApp\bin\Debug\CGIApp.pdb
+C:\Users\john\source\repos\CGIApp\bin\Debug\CGIApp.xml
+C:\Users\john\source\repos\CGIApp\obj\Debug\CGIApp.vbprojAssemblyReference.cache
+C:\Users\john\source\repos\CGIApp\obj\Debug\CGIApp.Resources.resources
+C:\Users\john\source\repos\CGIApp\obj\Debug\CGIApp.vbproj.GenerateResource.cache
+C:\Users\john\source\repos\CGIApp\obj\Debug\CGIApp.vbproj.CoreCompileInputs.cache
+C:\Users\john\source\repos\CGIApp\obj\Debug\CGIApp.exe
+C:\Users\john\source\repos\CGIApp\obj\Debug\CGIApp.xml
+C:\Users\john\source\repos\CGIApp\obj\Debug\CGIApp.pdb
